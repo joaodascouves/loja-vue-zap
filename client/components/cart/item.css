@@ -1,0 +1,143 @@
+.item-container {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.remove {
+  position: absolute;
+  top: 1em;
+  right: 0.2em;
+
+  width: 1.2em;
+  padding: 0.3em;
+  background: #ccc;
+  border-radius: 50%;
+  line-height: 1.2em;
+
+  text-align: center;
+}
+
+.item {
+
+  display: grid;
+  overflow: hidden;
+  /* height: 10em; */
+  padding: 0.5em;
+  border-top: 1px solid #ccc;
+  clear: both;
+  grid-template-columns: .45fr auto;
+}
+
+.item > div:not(.description) {
+  text-align: center;
+}
+
+.item__float-right {
+  display: grid;
+  align-items: center;
+
+  justify-content: space-evenly;
+  grid-template-columns: .7fr 1.5fr 1fr 1fr;
+}
+
+.item__thumb {
+  width: 10em;
+  height: 10em;
+}
+
+.item__description {
+  width: 20em;
+}
+
+.item__title {
+
+  max-width: 100%;
+  margin-bottom: 0.3em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.item__variation {
+  color: #666;
+}
+
+.item__effective-price {
+  font-size: 1.25em;
+}
+
+.item__original-price {
+  color: #f00;
+  text-decoration: line-through;
+}
+
+.item__quantity {
+  display: inline-block;
+}
+
+.item__total {
+  font-size: 1.25em;
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    display: block;
+    /* height: 15.5em; */
+    clear: both;
+    white-space: nowrap;
+  }
+
+  .item > div {
+    text-align: left !important;
+  }
+
+  .item__float-right {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .item__float-left {
+    height: 15.5em;
+    margin-right: 1em;
+    float: left;
+  }
+
+  .item__thumb {
+    width: 8em;
+  }
+
+  .item__description {
+    width: auto;
+  }
+
+  .item__title {
+    overflow: hidden;
+    max-width: 9em;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+    word-wrap: nowrap;
+  }
+
+  .item__price {
+    margin: 1em 0 0 0;
+  }
+
+  .item__original-price {
+    text-align: left;
+  }
+
+  .item__total {
+    font-size: 1em;
+    grid-row-end: 4;
+
+    grid-row-start: 3;
+  }
+
+  .item__total::before {
+
+    display: inline-block;
+    margin: .5em 0 .5em 0;
+    content: 'Total: ';
+  }
+}

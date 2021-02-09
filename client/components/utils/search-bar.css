@@ -1,0 +1,31 @@
+.searchbar {
+    display: flex;
+    min-width: 30vw;
+
+    height: auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.searchbar__icon {
+    margin-left: 10px;
+}
+
+.searchbar__input {
+    z-index: 9999999;
+    width: 0;
+    opacity: 0;
+
+    transition: width .35s, opacity .35s;
+}
+
+.searchbar__input.show {
+    width: calc(100% - 3em);
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .searchbar {
+        display: none;
+    }
+}

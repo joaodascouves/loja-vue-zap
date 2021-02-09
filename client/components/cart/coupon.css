@@ -1,0 +1,49 @@
+.coupon {
+  position: relative;
+  width: 100%;
+  clear: both;
+  float: none;
+  white-space: nowrap;
+}
+
+.coupon__label,
+.coupon__button {
+  vertical-align: middle;
+}
+
+.coupon__input {
+  display: inline-block;
+  
+  width: 60%;
+  box-sizing: border-box;
+
+  /* margin-bottom: 0.5em; */
+  margin-right: .5em;
+  font-size: 1.2em;
+}
+
+.coupon__input >>> .input__rectangle__input {
+  padding: 5px 1.7em !important;
+  font-size: 1.1em;
+}
+
+.coupon__text,
+.coupon__message,
+.coupon__current {
+  color: #fff;
+}
+
+.coupon__text {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.coupon__button {
+  padding: 0 1.5em;
+  font-weight: normal;
+}
+
+.coupon__remove {
+  margin-left: .5em;
+  color: yellow;
+}

@@ -1,0 +1,51 @@
+.section {
+    width: 45vw;
+}
+
+.section::before {
+    display: block;
+    content: attr(data-title);
+    font-size: 1.4em;
+}
+
+.label--margin {
+    display: block;
+    margin: 2em 0;
+}
+
+.cart {
+    margin-top: .8em !important;
+    margin-bottom: 3em !important;
+}
+
+.cart__summary {
+    margin-top: 1.5em;
+    line-height: 1.8em;
+}
+
+.cart__coupon {
+    margin-bottom: 2em;
+    opacity: .9;
+}
+
+.options, .options__button {
+    display: inline-block;
+}
+
+.options {
+    margin-top: 2em;
+}
+
+.options__button {
+    width: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .section {
+        width: 100%;
+    }
+
+    .label--margin {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,129 @@
+.menu {
+  position: absolute;
+  z-index: 99999999;
+  top: var(--super-height);
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  flex-direction: row;
+  font-size: 0.9em;
+
+  /* height: var(--menu-height); */
+  line-height: var(--menu-height);
+
+  /* justify-content: space-around; */
+
+  text-align: left;
+}
+
+.menu .expandable::after {
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.menu__route {
+  position: relative;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-bottom: 1.5em;
+  /* background: #ddd; */
+  color: var(--thematic-color-3);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.menu__subroute {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  text-align: left;
+  transition: max-height 0.2s ease;
+}
+
+.menu__route:not(.menu__route--vertical):hover > .menu__subroute {
+  max-height: 50vh;
+}
+
+.menu__route__name,
+.menu__subroute__name {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  background: #ddd;
+}
+
+.menu__subroute__name {
+  padding: 0.8em;
+  line-height: 0.6em;
+}
+
+.menu__route__name:hover,
+.menu__subroute__name:hover {
+  filter: contrast(50%);
+}
+
+@media screen and (max-width: 600px) {
+
+  .menu__container {
+    position: fixed;
+
+    z-index: 9999999;
+    top: 0;
+    width: 0;
+    min-height: 100vh;
+
+    max-height: 100%;
+    box-sizing: border-box;
+    background: var(--thematic-color-4);
+    color: transparent;
+    overflow-y: scroll;
+    transition: width 0.15s;
+  }
+
+  .menu {
+    position: relative;
+    top: 0;
+
+    width: 80vw;
+    flex-direction: column;
+    justify-content: initial;
+    font-size: 1em;
+
+    text-align: left;
+  }
+
+  .menu__route,
+  .menu__subroute {
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__route {
+    flex-grow: 0;
+  }
+
+  .menu__route__name {
+    font-size: 1em;
+  }
+
+  .menu__route__name,
+  .menu__subroute__name {
+    padding-top: 1em;
+    border-bottom: none;
+  }
+
+  .menu__subroute {
+    display: block;
+    max-height: fit-content;
+    font-size: .95em;
+  }
+
+  .menu .expandable::after {
+    display: none;
+    content: '';
+  }
+}

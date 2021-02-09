@@ -1,0 +1,44 @@
+.topbar {
+  position: relative;
+  width: 40vw;
+  margin-bottom: 3em;
+}
+
+.topbar > * {
+  display: inline-block;
+  margin: 0 !important;
+}
+
+.topbar__button {
+  margin: 0 !important;
+  margin-top: 5px !important;
+}
+
+.topbar__count {
+  position: absolute;
+  right: 0;
+  margin-bottom: 2em;
+  font-weight: normal;
+  line-height: 1.6em;
+}
+
+.topbar__count::after {
+  margin-left: 0.3em;
+  content: attr(data-content);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .topbar {
+    display: block;
+    width: 100% !important;
+  }
+
+  .topbar .button {
+    width: 8em;
+  }
+
+  .topbar__input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "env": {
+        "MONGODB_URI": "@store-mongodb-uri",
+        "SECRET_TOKEN": "@store-secret-token",
+        "MASTER_USERNAME": "@store-master-username",
+        "MASTER_PASSWORD": "@store-master-password",
+        "CLOUDINARY_URL": "@store-cloudinary-url"
+    },
+    "rewrites": [
+        { "source": "/", "destination": "/api/configuration/render"},
+        { "source": "/about", "destination": "/api/configuration/render" },
+        { "source": "/cart(.*)", "destination": "/api/configuration/render "},
+        { "source": "/checkout", "destination": "/api/configuration/render" },
+        { "source": "/order/(.*)", "destination": "/api/configuration/render" },
+        { "source": "/product/(.*)", "destination": "/api/configuration/render" },
+        { "source": "/products(.*)", "destination": "/api/configuration/render" },
+        { "source": "/success", "destination": "/api/configuration/render "},
+        { "source": "/terms-of-use", "destination": "/api/configuration/render" },
+        { "source": "/admin((?!/serviceWorker\\.js).*)", "destination": "/api/configuration/render" },
+        { "source": "/robots.txt", "destination": "/api/configuration/robots" },
+        { "source": "/sitemap.xml", "destination": "/api/configuration/sitemap" },
+        { "source": "/serviceWorker.js", "destination": "/api/configuration/serviceWorker" },
+        { "source": "/admin/serviceWorker.js", "destination": "/api/configuration/serviceWorker" },
+        { "source": "/static/manifest.json", "destination": "/api/configuration/clientManifest" },
+        { "source": "/static/admin/manifest.json", "destination": "/api/configuration/adminManifest" },
+        { "source": "/static/icons/icon(.*)", "destination": "/api/configuration/icon" },
+        { "source": "/static/admin/icons/icon(.*)", "destination": "/api/configuration/icon" } 
+    ]
+}

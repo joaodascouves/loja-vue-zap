@@ -1,0 +1,17 @@
+.form-model--personal-data {
+    margin-bottom: 1em;
+  }
+  
+.form-model--personal-data__details {
+  padding-top: 1.5em !important;
+}
+
+.form-model--personal-data__details__textarea {
+  width: 90%;
+  height: 10em;
+  box-sizing: border-box;
+}
+
+.notice {
+  margin-bottom: 2em;
+}

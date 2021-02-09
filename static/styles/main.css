@@ -1,0 +1,177 @@
+.fa::before,.fab::before,.fas::before {
+  vertical-align: middle;
+}
+
+* {
+  font-size-adjust: 0.58;
+  -webkit-font-smoothing: antialised;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--view-background-color);
+  color: var(--view-foreground-color);
+  font-family: var(--normal-font);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#main-view {
+  min-height: 150vh;
+  padding-bottom: 5vh;
+  margin-top: calc(var(--super-height) + var(--menu-height));
+}
+
+.page {
+  position: relative;
+  overflow: visible;
+  width: 97vw;
+  padding-top: 1.5vh;
+  margin: 0 auto;
+}
+
+.centered-fullpage {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--view-foreground-color);
+  text-decoration: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.message {
+  display: block;
+}
+
+.centered {
+  display: block;
+  width: 74vw;
+  margin: 0 auto;
+}
+
+.hidden {
+  height: 0;
+  visibility: hidden;
+}
+
+.content-centered {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.whitespace-preline {
+  margin: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.padded {
+  padding: 0 5px;
+}
+
+.easy-text {
+  font-size: 12.5pt;
+}
+
+.easy-text img {
+  width: auto;
+  height: auto;
+
+  margin: 0 2em 1em 0;
+
+  float: left;
+}
+
+.easy-text > *:first-child {
+  margin-top: 0;
+}
+
+input {
+
+  background: transparent;
+  color: var(--input-text-color);
+  outline: none;
+}
+
+img {
+  transition: opacity 1.5s;
+}
+
+img[lazy=loading] {
+  opacity: 0;
+}
+
+img[lazy=loaded] {
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  #main-view, .page {
+    min-height: 100vh;
+  }
+
+  .centered {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #main-view {
+    min-height: 100vh !important;
+    margin-top: calc(var(--super-height));
+  }
+
+  .backdrop-faded {
+    /* filter: grayscale(1) brightness(.3); */
+    filter: brightness(.5);
+    pointer-events: none;
+    touch-action: none;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .centered {
+    width: 95vw;
+  }
+
+  .centered-fullpage {
+    width: 89vw;
+  }
+
+  .padded {
+    padding: 0 15px;
+  }
+
+  .easy-text {
+    font-size: 14pt;
+  }
+
+  .easy-text img {
+    width: 100%;
+
+    margin: 0;
+    float: none;
+  }
+}

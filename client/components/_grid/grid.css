@@ -1,0 +1,15 @@
+.grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: var(--justify-content);
+
+  gap: .5em;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    width: 100%;
+    gap: .5em;
+  }
+}

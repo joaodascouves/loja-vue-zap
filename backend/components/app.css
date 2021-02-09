@@ -1,0 +1,25 @@
+@import url(~static/styles/main.css);
+@import url(~static/styles/shared/theme.css);
+@import url(~static/styles/backend/theme.css);
+
+.page {
+  width: calc(100vw - 26.8vw);
+  margin: 0 0 0 24.5vw;
+}
+
+#main-view {
+  margin-top: calc(var(--super-height));
+}
+
+@media screen and (max-width: 600px) {
+
+  .page {
+    width: 97vw;
+    margin: 0 auto;
+  }
+
+  ::v-deep .show {
+    width: 80vw;
+    color: inherit;
+  }
+}

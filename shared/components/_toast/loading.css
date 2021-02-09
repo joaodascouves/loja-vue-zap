@@ -1,0 +1,4 @@
+.toast--loading {
+  background: var(--loading-background-color);
+  color: var(--loading-foreground-color);
+}

@@ -1,0 +1,58 @@
+.upload-container {
+  position: relative;
+  width: 15em;
+}
+
+label {
+  padding: 0;
+  margin: 0;
+}
+
+.upload {
+  margin-top: 1em;
+}
+
+.upload__image-preview {
+  width: 100%;
+  height: 15em;
+}
+
+.upload__input {
+  display: none;
+}
+
+.options {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.3em 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.options > * {
+  width: fit-content;
+  margin: 0;
+}
+
+.options--hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .upload-container {
+    width: 100%;
+  }
+
+  .upload__image-preview {
+    display: block;
+    width: 100%;
+    height: 97vw;
+  }
+
+  .options {
+    margin: 1em 0;
+    font-size: 0.9em;
+  }
+}

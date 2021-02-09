@@ -1,0 +1,146 @@
+/* .form-model {
+  margin-bottom: 3em;
+} */
+
+.form-model__section {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+/* 
+.form-model__section:not(:first-child) > div:first-child {
+  margin-top: 3em !important;
+}
+
+.form-model__section:first-child > div:first-child {
+  margin-top: 0 !important;
+}
+
+.form-model__section > label:not(:first-of-type) > div:first-of-type {
+  margin-top: 1em !important;
+} */
+
+.form-model__name {
+  margin-bottom: 1.5em;
+  font-size: 1.3em;
+}
+
+.form-model__label--optional::after {
+  margin-left: 0.2em;
+  content: '(opcional)';
+  font-size: 0.9em;
+}
+
+.form-model__label + .form-model__inline {
+  margin-top: 5px;
+}
+
+.form-model__wrapper {
+  flex-basis: 100%;
+  flex-grow: 1;
+
+  margin: 0 .65em 1.2em 0;
+}
+
+.form-model__wrapper--custom {
+  max-width: var(--width);
+}
+
+.form-model__wrapper--custom + .form-model__wrapper {
+  flex-basis: 0;
+  align-self: flex-end;
+}
+
+.form-model__wrapper--inline-single {
+  margin: 0;
+}
+
+.form-model__wrapper--inline-single + :not(.form-model__wrapper--inline-single) {
+  margin-top: 1.8em;
+}
+
+.form-model__inline {
+  display: block;
+  width: auto;
+  height: 2em;
+}
+
+.form-model__inline * {
+  display: inline-block;
+  padding: 0 !important;
+  margin: 0 0.3em 0 0 !important;
+
+  vertical-align: middle !important;
+
+  /* max-width: 1em;
+    max-height: 2em; */
+}
+
+.form-model__inline div {
+  width: auto !important;
+}
+
+.form-model__information {
+  display: block;
+  margin-top: 0.1em;
+  color: #666;
+}
+
+.form-model__textarea {
+  min-width: 30em;
+  min-height: 10em;
+
+  box-sizing: border-box;
+  padding: .5em;
+
+  border: 1px solid #555;
+  outline: none;
+}
+
+.form-model__textarea:focus {
+  outline: 1px solid var(--foreground-color-1);
+}
+
+.form-model--blocked,
+.form-model--blocked * {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-model--blocked::after {
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  padding: 1em;
+
+  background: #ccc;
+  content: 'Carregando...';
+  opacity: .95;
+}
+
+.form-model__dummy {
+  border: 1px solid transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .form-model__textarea {
+    min-width: 100%;
+  }
+
+  .form-model__wrapper--custom {
+    max-width: var(--mobile-width);
+  }
+}

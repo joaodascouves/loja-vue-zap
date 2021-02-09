@@ -1,0 +1,112 @@
+.modal {
+  position: fixed;
+  z-index: 999996;
+  top: calc(-100vh - 2px);
+  left: 0;
+  width: 100vw !important;
+  height: 100vh;
+  background: #fff;
+  color: #000;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: transform 0.5s;
+}
+
+.modal.show {
+  transform: translateY(calc(100vh + 2px));
+}
+
+.modal #close {
+  position: absolute;
+  z-index: 9999999;
+  top: 2px;
+  right: 1vw;
+  color: rgba(60, 60, 60, 0.5);
+  font-size: 3.5em;
+}
+
+.modal .centered {
+  display: block;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.modal .disclaimer {
+  margin-top: 1.5em !important;
+  margin-bottom: 2em !important;
+  color: #000;
+}
+
+.modal .form *,
+.modal .form .button {
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 0.6em 1em !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.5em !important;
+}
+
+.modal .form div {
+  padding: 0 !important;
+}
+
+.modal .form input,
+.modal .button {
+  border: 1px solid #000;
+}
+
+.modal .padded {
+  padding: 1em 1.5em;
+}
+
+.modal .bottom-bar {
+  width: 100%;
+  /* position: absolute; */
+
+  margin-top: 2em;
+
+  /* bottom: 3.5vw; */
+}
+
+.modal .bottom-bar > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal .bottom-bar .total > span:first-child {
+  font-size: 1.5em;
+}
+
+.modal .bottom-bar .total > span:last-child {
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.modal .centered.form {
+  width: 35em !important;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .modal .centered {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em;
+    color: #000;
+  }
+
+  .modal .form > .button {
+    display: inherit;
+
+    /* margin-top: 0em !important; */
+  }
+
+  .modal #close {
+    top: 10px;
+    font-size: 2em;
+  }
+
+  .modal .centered.form {
+    width: 100% !important;
+  }
+}

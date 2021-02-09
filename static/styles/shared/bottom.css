@@ -1,0 +1,55 @@
+.bottom-section {
+  display: flex;
+  min-height: 30vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em 0 5em 0;
+  background: #fff;
+  color: #000;
+  font-size: 0.95em;
+}
+
+.bottom-section a {
+  color: #000 !important;
+}
+
+.bottom-section ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.bottom-section ul li {
+  margin: 0.45em 0;
+}
+
+.bottom-section .section {
+  align-self: flex-start;
+  margin-top: 1em;
+}
+
+.bottom-section .section > * {
+  display: block;
+}
+
+.bottom-section .section::before {
+  display: block;
+  margin-bottom: 1em;
+  content: attr(data-name);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .bottom-section {
+    display: block;
+    overflow: auto;
+    padding: 1em 0;
+  }
+
+  .bottom-section .section {
+    min-width: 45%;
+    margin: 0.5em;
+    background: transparent;
+    float: left;
+  }
+}

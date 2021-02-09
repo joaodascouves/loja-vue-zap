@@ -1,0 +1,26 @@
+.input--default {
+    display: inherit;
+}
+
+.input--contrast .input__rectangle__input {
+    padding-left: 1.2em !important;
+
+    border: 1px solid #666;
+    background: #fff;
+}
+
+.input--contrast .input__rectangle__input--padded {
+    padding-left: 2.2em !important;
+}
+
+.input--contrast .input__border {
+    display: none;
+}
+
+.input--contrast:focus-within .input__rectangle__input {
+    border: 1px solid #666;
+}
+
+.input--rounded .input__rectangle__input {
+    border-radius: 6px;
+}

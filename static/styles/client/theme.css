@@ -1,0 +1,46 @@
+:root {
+  --view-foreground-color: #000;
+  --view-background-color: #fff;
+  --icon-color: #d9fcf2;
+  --menu-height: 3em;
+
+  /* --thematic-color-1: #000;
+  --thematic-color-2: #f7e3ea; */
+  --photo-slide-height: calc(100vh - var(--super-height));
+  --product-view-height: 29em;
+  --product-view-background-color: #fff;
+  --product-view-foreground-color: #000;
+
+  /* --thematic-color-3: #000;
+  --thematic-color-4: #f7a3aa; */
+  --menu-item-background-color: #fff;
+  /* --menu-hover-color: #f7e3ea; */
+}
+
+.header2 {
+  display: inline-block;
+}
+
+/* .header2--underscore {
+  border: 1px solid var(--thematic-color-4);
+  border-width: 0 0 5px 0;
+} */
+
+.header3 {
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.soft {
+  color: #555;
+}
+
+.rounded {
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .header3 {
+    font-size: 14.5pt;
+  }
+}

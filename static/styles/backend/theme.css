@@ -1,0 +1,42 @@
+:root {
+  --menu-height: 2.5em;
+  --misc-font: roboto;
+  --normal-font: roboto;
+}
+
+/* input {
+  box-sizing: border-box;
+  padding: 0.6em 0 !important;
+  border: 1px solid #fff !important;
+  border-width: 0 0 1px 0 !important;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+input:focus {
+  border-color: #f81 !important;
+  border-bottom-width: 2px !important;
+} */
+/* 
+label div {
+  margin: 0.8em 0 0.1em 0;
+  font-size: 0.9em;
+}
+
+label input[type=text],
+label input[type=password],
+label input[type=number] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  background: #292929;
+} */
+
+.box,
+.list .item {
+  background: #444;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px #000;
+}

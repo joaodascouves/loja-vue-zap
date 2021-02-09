@@ -1,0 +1,12 @@
+.item {
+  padding: .5em 0;
+  border-bottom: 3px solid var(--thematic-color-4);
+  background: var(--thematic-color-2);
+
+  border-radius: 10px;
+  text-align: center;
+}
+
+.item:hover {
+  background: var(--thematic-color-4);
+}

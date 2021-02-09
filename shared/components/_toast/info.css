@@ -1,0 +1,4 @@
+.toast--info {
+  background: var(--info-background-color);
+  color: var(--info-foreground-color);
+}

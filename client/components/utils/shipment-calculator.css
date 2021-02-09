@@ -1,0 +1,30 @@
+.calculator {
+    display: block;
+    padding: 1em .7em;
+    /* background: linear-gradient(20deg,
+        #2244ff,
+        #225588 40%,
+        #224477 70%
+    ); */
+
+    background: #efefef;
+}
+
+.calculator__text {
+    margin-bottom: 1em;
+    /* font-weight: bold; */
+    font-size: 1.1em;
+}
+
+.calculator__select,
+.calculator__select__option {
+    width: 20em;
+    padding: .6em .5em;
+}
+
+@media screen and (max-width: 600px) {
+    .calculator__select,
+    .calculator__select__option {
+        width: 80%;
+    }
+}

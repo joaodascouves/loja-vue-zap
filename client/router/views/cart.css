@@ -1,0 +1,23 @@
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 1em;
+  }
+  
+  .options__button {
+    display: inline-table;
+    margin: 0 0 0 .5em;
+  }
+
+  @media screen and (max-width: 600px) {
+    .options {
+        justify-content: center;
+      }
+    
+      .options__button {
+        width: 100%;
+        max-width: 20em;
+        margin: 0 0 .5em 0;
+      }
+  }

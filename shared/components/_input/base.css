@@ -1,0 +1,79 @@
+.input, .input_wrapper, .input__rectangle {
+    position: relative;
+    width: 100%;
+}
+
+.input__label {
+    top: 2em;
+
+    display: block;
+
+    min-height: 20px;
+    color: var(--color);
+    line-height: .9em;
+    transition: font-size .35s;
+}
+
+.input__hint {
+    color: var(--input-hint-color);
+
+    font-size: .8em;
+    line-height: 1.5em;
+    opacity: .8;
+    visibility: hidden;
+}
+
+.input__rectangle__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .5em 1em .5em 0 !important;
+
+    border: 1px solid #666;
+    border-width: 0 0 1px 0;
+    background: transparent;
+
+    color: var(--input-text-color);
+    letter-spacing: 1px;
+
+    transition: border-color .45s;
+}
+
+.input__rectangle__input--padded {
+    padding: .5em 1em .5em 2.2em !important;
+}
+
+.input__rectangle__icon {
+    position: absolute;
+    top: 50%;
+    left: .45em;
+    opacity: .5;
+
+    transform: translateY(-50%);
+}
+
+.input__border::before {
+    display: block;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--border-color);
+    content: '';
+    transition: width .45s ease-out;
+}
+
+.input:focus-within .input__label {
+    font-size: .9em;
+}
+
+.input:focus-within .input__rectangle__input {
+    border-color: transparent;
+}
+
+.input:focus-within .input__hint {
+    visibility: visible;
+}
+
+.input:focus-within .input__border::before {
+    width: 100%;
+}

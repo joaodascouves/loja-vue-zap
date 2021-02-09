@@ -1,0 +1,23 @@
+.discount {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 50%;
+  padding: 3% 0;
+  background: var(--thematic-color-2);
+  color: var(--thematic-color-3);
+  text-align: center;
+}
+
+.discount::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  background: var(--thematic-color-2);
+  content: '';
+  transform: skewX(-20deg);
+}

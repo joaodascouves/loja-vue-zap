@@ -1,0 +1,20 @@
+.bubble {
+    position: relative;
+    display: inline-block;
+
+    padding: .5em 1em;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.bubble__icon {
+    min-height: 0;
+    margin-left: .5em;
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    .bubble {
+        padding: .2em .5em;
+    }
+}

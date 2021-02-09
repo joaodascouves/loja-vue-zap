@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid__photo {
+    height: calc(80vw/3);
+}

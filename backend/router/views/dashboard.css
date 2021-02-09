@@ -1,0 +1,116 @@
+.dashboard {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-gap: 1%;
+
+    grid-template-columns: 60% auto;
+}
+
+.dashboard__panel {
+    position: relative;
+    
+    width: auto;
+    box-sizing: border-box;
+
+    padding: 1em;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.dashboard__chart {
+    width: 100%;
+    height: 25em;
+}
+
+.stats {
+    position: relative;
+
+    display: inline-block;
+    overflow: visible;
+
+    width: 100%;
+    margin-top: 2em;
+}
+
+/* .stats__section {
+    display: inline-block;
+    line-height: 50px;
+}
+
+.stats__section--numbers {
+    font-size: 2em;
+    text-align: right;
+
+    margin-right: 15px;
+}
+
+.stats__section * {
+    vertical-align: middle;
+}
+
+.stats__section--float-right {
+    float: right;
+    clear: both;
+
+    max-width: 80%;
+    white-space: nowrap;
+
+    margin-left: 5px;
+}
+*/
+
+.stat__add {
+
+    margin-right: 5px;
+
+    float: right;
+    font-size: 1.2em;
+    line-height: 2.5em;
+}
+
+.stats__stat {
+    display: flex;
+
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.stat__value,
+.stat__label {
+    line-height: 50px;
+}
+
+.stat__value {
+    flex-grow: 1;
+
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.stat__label {
+    width: 16em;
+    color: #ddd;
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard {
+        grid-gap: .45em;
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard__panel {
+        max-width: 97vw;
+        padding: 0;
+    }
+
+    .dashboard__panel--stats {
+        padding: .5em;
+    }
+    
+    .dashboard__chart {
+        width: 100%;
+        height: 20em;
+    }
+}

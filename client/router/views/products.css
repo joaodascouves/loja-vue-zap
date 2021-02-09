@@ -1,0 +1,23 @@
+.header3--nofloat {
+  display: block;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.products {
+  overflow: auto;
+}
+
+.products__showcase {
+  width: 75%;
+  margin-left: 23.5%;
+  clear: right;
+}
+
+@media screen and (max-width: 600px) {
+  .products__showcase {
+    width: 100%;
+    min-height: auto !important;
+    margin: 0;
+  }
+}

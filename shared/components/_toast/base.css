@@ -1,0 +1,40 @@
+.toast {
+  position: fixed;
+
+  /* transition: all 1s; */
+
+  z-index: 999999999;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  min-height: 3em;
+  box-sizing: border-box;
+  padding: 1em;
+  background: var(--toast-background-color);
+  color: var(--toast-foreground-color);
+  font-size: 0.9em;
+  text-align: center;
+  transform: translate(-50%, 10em);
+}
+
+.toast::before {
+  content: attr(data-message);
+}
+
+.toast--visible {
+  animation: toastpopup 1s forwards;
+}
+
+.toast--hidden {
+  animation: toastpopdown 1s forwards;
+}
+
+@keyframes toastpopup {
+  from { transform: translate(-50%, 10em); }
+  to { transform: translate(-50%, 0); }
+}
+
+@keyframes toastpopdown {
+  from { transform: translate(-50%, 0); }
+  to { transform: translate(-50%, 10em); }
+}

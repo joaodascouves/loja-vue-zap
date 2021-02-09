@@ -1,0 +1,7 @@
+.super {
+    background: #444;
+}
+
+.super div >>> .fas {
+    font-size: 1.4em;
+}

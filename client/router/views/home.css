@@ -1,0 +1,41 @@
+.header3 {
+  margin-bottom: .5em;
+}
+
+.home__block {
+  margin-top: 5em;
+}
+
+.home__block--nomargin {
+  margin-top: 0 !important;
+}
+
+.home__block--first {
+  margin-top: 3em;
+}
+
+/* .home__empty {
+  margin: 5em 0;
+  font-size: 1.5em;
+  font-weight: 300;
+} */
+
+.home__button {
+  display: block !important;
+  width: 15em;
+  margin: 0.8em auto 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .home__block {
+    margin-top: 2em;
+  }
+
+  .home__block--first {
+    margin-top: 1em;
+  }
+
+  .home__button {
+    max-width: 100%;
+  }
+}

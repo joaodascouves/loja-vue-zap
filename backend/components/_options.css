@@ -1,0 +1,26 @@
+.options {
+    width: 40vw;
+}
+
+/* .form-model >>> .form-model__wrapper--inline {
+    margin: 0;
+} */
+
+.options__item {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.options__remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 600px) {
+    .options {
+        width: 100%;
+    }
+}

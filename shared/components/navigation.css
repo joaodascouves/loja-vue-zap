@@ -1,0 +1,15 @@
+.navigation {
+  margin-bottom: 2.5em;
+  font-size: 0.85em;
+  line-height: 1.2em;
+}
+
+.navigation span:nth-child(n+1):nth-last-child(n+2)::after {
+  content: '»';
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    display: none;
+  }
+}

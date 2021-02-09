@@ -1,0 +1,86 @@
+@import url(~static/styles/main.css);
+@import url(~static/styles/shared/theme.css);
+@import url(~static/styles/client/theme.css);
+
+* {
+  transition: filter .5s;
+}
+
+#main-view {
+  margin-top: var(--menu-height);
+}
+
+.dummy-spacer {
+  padding-top: 0em;
+}
+
+.dummy-spacer::before {
+  display: block;
+  width: 1px;
+  height: 5.5em;
+  padding-top: 5em !important;
+  content: '';
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.3s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+}
+
+.navigation {
+  animation: navigation-enter 1s forwards;
+}
+
+.navigation--hidden {
+  animation: navigation-leave .5s forwards;
+  color: red;
+}
+
+@keyframes navigation-enter {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 5em;
+    opacity: 1;
+  }
+}
+
+@keyframes navigation-leave {
+  from {
+    max-height: 5em;
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #main-view {
+    margin-top: 3.8em;
+  }
+
+  .dummy-spacer {
+    padding-top: 0;
+  }
+
+  .dummy-spacer::before {
+    height: 4.5em;
+  }
+
+  ::v-deep .show {
+    width: 80vw;
+    color: inherit;
+  }
+}

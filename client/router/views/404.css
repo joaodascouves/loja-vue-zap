@@ -1,0 +1,22 @@
+.notfound {
+    text-align: center;
+}
+
+.notfound__big {
+    font-size: 9em;
+}
+
+.notfound__small {
+    width: 50vw;
+}
+
+a {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .notfound__small {
+        width: 98%;
+        font-size: .95em;
+    }
+}

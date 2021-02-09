@@ -1,0 +1,19 @@
+.menu {
+  display: grid;
+
+  width: 23em;
+  margin-right: 3em;
+  float: left;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+
+    width: 100%;
+    margin: 0 0 1.5em 0;
+    float: none;
+    grid-template-columns: 1fr 1fr;
+  }
+}

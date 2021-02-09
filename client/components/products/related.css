@@ -1,0 +1,85 @@
+.related {
+  position: relative;
+}
+
+.related__back {
+  display: block;
+  width: 15em;
+  margin: 1em auto 0 auto;
+}
+
+.related__showcase {
+  margin-top: 1em;
+}
+
+.related__showcase::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .related {
+    margin-top: 2em !important;
+  }
+
+  .related__positional {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+
+  .related__positional > * {
+    position: absolute;
+    
+    width: var(--diameter);
+    height: var(--diameter);
+    background: #ccc;
+    border-radius: 50%;
+
+    font-family: 'Font Awesome 5 Free';
+    font-size: 3em;
+    font-weight: 900;
+    line-height: var(--diameter);
+
+    opacity: .5;
+
+    text-align: center;
+
+    --diameter: 45px;
+  }
+
+  .related__left {
+    left: 0;
+  }
+
+  .related__right {
+    right: 0;
+  }
+
+  .related__left::before {
+    content: '\f104';
+  }
+
+  .related__right::before {
+    content: '\f105';
+  }
+
+  .related__showcase {
+
+    display: block;
+    margin-top: .8em;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  ::v-deep .related__showcase > * {
+    display: inline-block;
+    width: 50%;
+    height: 80vw;
+  }
+
+  ::v-deep .related__showcase > *:not(:last-child) {
+    margin-right: .6em;
+  }
+}

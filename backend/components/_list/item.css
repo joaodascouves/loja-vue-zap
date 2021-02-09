@@ -1,0 +1,106 @@
+.item {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  min-height: 5em;
+
+  min-height: 10em;
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.7em;
+}
+
+.item * {
+  overflow: hidden;
+  max-width: 100%;
+  font-size: 0.95em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item span:first-child::after {
+  content: ':';
+}
+
+.item__float-left {
+  position: relative;
+  width: 10em;
+
+  height: 10em;
+
+  margin-right: 1em;
+  clear: both;
+
+  float: left;
+}
+
+.item__thumb {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 90%;
+  max-height: 10em;
+  transform: translateY(-50%);
+}
+
+.item__options {
+  position: absolute;
+  top: 3em;
+  right: 0;
+  
+  max-height: 0;
+
+  background: #222;
+  transition: all .25s ease-in-out;
+}
+
+.item__options--show {
+  max-height: 25em;
+}
+
+.item__options > .option {
+  display: block;
+  
+  width: 100%;
+  padding: .3em 2em .3em .6em;
+}
+
+.item__options > .option:hover {
+  background: #333;
+}
+
+/* .item__options {
+  padding-top: 2em;
+  white-space: normal;
+}
+
+.item__options > * {
+  min-width: 4em;
+  max-width: 6em;
+  margin: 0;
+}
+
+.item__options > *:not(:first-child) {
+  margin-left: 0.2%;
+} */
+
+.item__options-icon {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    width: 100%;
+    padding: 0.5em;
+    line-height: 1.8em;
+  }
+
+  .item__float-left {
+    width: 7em;
+  }
+}
